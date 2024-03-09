@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminex Apparel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<div id="carrito-ventana" class="carrito-ventana">
+    <div id="resumen-carrito"></div>
+    <div id="total-carrito"></div>
+    <button onclick="cerrarCarrito()">Cerrar Carrito</button>
+    <button onclick="ordenarAHabitacion()">Ordenar a la Habitación</button>
+</div>
+
+<body>
+
+    <div class="carrito-icon" onclick="mostrarCarrito()">
+        <a href="#carrito"><img src="carrito.jpg" alt="Icono de Carrito de Compras"></a>
+    </div>
+
+    <header>
+        <img src="F.png" alt="Logo de Tu Mercado de Comidas" class="logo">
+        <h1><f>L</f>uminex Apparel</h1>
+
+        <div class="filtro-container">
+            <label for="filtro">Filtrar por:</label>
+            <select id="filtro" onchange="filtrarPlatos()">
+                <option value="todos">Todos</option>
+                <option value="desayuno">Remeras Luminex</option>
+                <option value="almuerzo">oversise (proximamente)</option>
+            </select>
+        </div>
+
+        
+    </header>
+
+    <section class="hero">
+        <h2></h2>
+    </section>
+
+    <section id="comidas">
+        <div class="comida">
+            <img src="gohan.png" alt="Plato 1">
+            <h2>Remera Gohan</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Gohan', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="gohan_vs_cell.png" alt="Plato 1">
+            <h2>Remera Gohan Vs Cell Max</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="pochita.png" alt="Plato 2">
+            <h2>Remera Pochita</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Pochita', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="batman_vs_joker.png" alt="Plato 2">
+            <h2>Remera Batman Vs Joker</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Batman vs Joker', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="goku_blue.png" alt="Plato 2">
+            <h2>Remera Goku Blue</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Goku Blue', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+        <div class="comida">
+            <img src="nirvana.png" alt="Plato 2">
+            <h2>Remera Nirvana</h2>
+            <p>Descripción del plato.</p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Nirvana', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+          <div class="comida">
+              <img src="monster.png" alt="Plato 2">
+              <h2>Remera Monster</h2>
+              <p>Descripción del plato.</p>
+              <p>Precio: ARS$12.000</p>
+              <button onclick="agregarAlCarrito('Remera Monster', 12.0000)">Añadir al Carrito</button>
+          </div>
+    
+          <div class="comida">
+              <img src="buu.png" alt="Plato 2">
+              <h2>Remera Majin Buu</h2>
+              <p></p>
+              <p>Precio: ARS$12.000</p>
+              <button onclick="agregarAlCarrito('Remera Buu', 12.0000)">Añadir al Carrito</button>
+          </div>
+
+          <div class="comida">
+            <img src="joker.png" alt="Plato 2">
+            <h2>Remera Joker</h2>
+            <p></p>
+            <p>Precio: ARS$12.000</p>
+            <button onclick="agregarAlCarrito('Remera Joker', 12.0000)">Añadir al Carrito</button>
+        </div>
+
+
+
+        <!-- agregar más elementos "comida" según quiera necesario -->
+    </section>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
