@@ -5,13 +5,17 @@ body {
     background-color: #f4f4f4;
 }
 
+p{
+    font-family: cursive;
+}
+
 .logo {
     width: 40px; /* Ajusta el tamaño de tu logo según sea necesario */
     margin-right: 10px;
 }
 
 f{
-    color: #FF0000;
+    color: #a10ee6;
 }
 
 header {
@@ -40,20 +44,6 @@ header {
     margin-bottom: 1em;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 1em 2em;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #e05a00;
-}
 
 section {
     display: flex;
@@ -89,6 +79,19 @@ section {
     transform: translateY(0);
 }
 
+.agregar{
+    padding-left: 175px;
+}
+
+button{
+    width: 100px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #c8b5cc;
+    border: none;
+    font-size: larger;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 footer {
     background-color: #333;
@@ -105,7 +108,7 @@ footer {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #FF0000; /* Color de fondo rojo */
+    background-color: #2415af; /* Color de fondo rojo */
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -139,3 +142,11 @@ footer {
     transform: translateY(-10px);
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: #a607b4;
+}
+
+.carrito-icon:hover{
+    background-color: #d31919;
+}
