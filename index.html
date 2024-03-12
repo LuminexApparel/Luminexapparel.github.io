@@ -7,111 +7,134 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
-
 <body>
-
-
     <header>
         <img src="F.png" alt="Logo de Tu Mercado de Comidas" class="logo">
         <h1><L>L</L>uminex Apparel</h1>
-
-        <div class="filtro-container">
-            <label for="filtro">Filtrar por:</label>
-            <select id="filtro" onchange="filtrarPlatos()">
-                <option value="todos">Todos</option>
-                <option value="desayuno">Remeras Luminex</option>
-                <option value="almuerzo">oversise (proximamente)</option>
-            </select>
-        </div>
-
-        
+        <div><button class="cambiar_fondo" id="cambiar_fondo"></button></div>
     </header>
-    
-    
-    
 
     <section id="comidas">
-
-        
-        <div class="comida">
-            <img src="gohan.png" alt="Plato 1">
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="gohanNormal.png" alt="Plato 1">
+                <img class="bottom" src="gohan.png" alt="Plato 1" style="display: none;">
+            </div>
             <h2>Remera Gohan</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"> <button onclick="agregarAlCarrito('Remera Gohan', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"> <button class="button" onclick="agregarAlCarrito('Remera Gohan', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="gohan_vs_cell.png" alt="Plato 1">
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="gohan_vs_cell_Normal.png" alt="Plato 3">
+                <img class="bottom" src="gohan_vs_cell.jpg" alt="Plato 4" style="display: none;">
+            </div>
             <h2>Remera Gohan Vs Cell Max</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-           <p class="agregar"><button onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="pochita.png" alt="Plato 2">
-            <h2>Remera Pochita</h2>
+
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="pochita_Normal.jpg" alt="Plato 3">
+                <img class="bottom" src="pochita.png" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera pochita</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"><button onclick="agregarAlCarrito('Remera Pochita', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="batman_vs_joker.png" alt="Plato 2">
-            <h2>Remera Batman Vs Joker</h2>
+       
+
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="batman_vs_joker_Normal.jpg" alt="Plato 3">
+                <img class="bottom" src="batman_vs_joker.jpg" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera Batman VS Joker</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"><button onclick="agregarAlCarrito('Remera Batman vs Joker', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="goku_blue.png" alt="Plato 2">
-            <h2>Remera Goku Blue</h2>
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="goku_blue_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="goku_blue.png" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera goku SSGSS</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"><button onclick="agregarAlCarrito('Remera Goku Blue', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="nirvana.png" alt="Plato 2">
-            <h2>Remera Nirvana</h2>
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="nirvana_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="nirvana.jpg" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera Gohan Vs Cell Max</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"><button onclick="agregarAlCarrito('Remera Nirvana', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-          <div class="comida">
-              <img src="monster.png" alt="Plato 2">
-              <h2>Remera Monster</h2>
-              <p>Talles de S a XL</p>
-              <p>Precio: ARS$12.000</p>
-              <p class="agregar"><button onclick="agregarAlCarrito('Remera Monster', 12.0000)">Añadir al Carrito</button></p>
-          </div>
+          <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="monster_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="monster.png" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera Monster</h2>
+            <p>Talles de S a XL</p>
+            <p>Precio: ARS$12.000</p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
+        </div>
     
-          <div class="comida">
-              <img src="buu.png" alt="Plato 2">
-              <h2>Remera Majin Buu</h2>
-              <p>Talles de S a XL</p>
-              <p>Precio: ARS$12.000</p>
-              <p class="agregar"><button onclick="agregarAlCarrito('Remera Buu', 12.0000)">Añadir al Carrito</button></p>
-          </div>
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="buu_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="buu.png" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera Majin Buu</h2>
+            <p>Talles de S a XL</p>
+            <p>Precio: ARS$12.000</p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
+        </div>
 
           <div class="comida">
-            <img src="joker.png" alt="Plato 2">
+            <img src="sonic.jpg" alt="Plato 1">
+            <h2>Remera Sonic</h2>
+            <p>Talles de 8 a 16</p>
+            <p>Precio: ARS$10.000</p>
+            <p class="agregar"> <button class="button" onclick="agregarAlCarrito('Remera sonic', 12.0000)">Añadir al Carrito</button></p>
+        </div>
+
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="joker_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="joker.png" alt="Plato 4" style="display: none;">
+            </div>
             <h2>Remera Joker</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"><button onclick="agregarAlCarrito('Remera Joker', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
-        <div class="comida">
-            <img src="ricky.png" alt="Plato 1">
-            <h2>Remera Gohan Vs Cell Max</h2>
+
+        <div class="comida color1">
+            <div class="img-container">
+                <img class="top" src="ricky_normal.jpg" alt="Plato 3">
+                <img class="bottom" src="ricky.png" alt="Plato 4" style="display: none;">
+            </div>
+            <h2>Remera Rick and Morty</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-           <p class="agregar"><button onclick="agregarAlCarrito('Remera Ricky', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera gohan vs Cell Max', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
         <div class="comida">
@@ -120,7 +143,7 @@
             <p>Talles de S a XL</p>
             <p>OVERSISE</p>
             <p>Precio: ARS$12.000</p>
-           <p class="agregar"><button onclick="agregarAlCarrito('Remera Vegeta', 12.0000)">Añadir al Carrito</button></p>
+           <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera Vegeta', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
 
@@ -145,7 +168,7 @@
     
 
     <script src="script.js"></script>
-</body>
+</+body>
 
 
 </html>

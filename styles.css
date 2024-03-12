@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ef454579;
 }
 
 p{
@@ -14,12 +14,22 @@ p{
     margin-right: 10px;
 }
 
+ .color1 {
+    background-color: #ff0000;
+ }
+ 
+.color2 {
+    background-color: #00ff00;
+}
+
 L{
     color: #a10ee6;
 }
 
+
 header {
-    background-color: #06003a;
+
+    background: linear-gradient(0deg, rgba(150, 9, 9, 0), #040140);
     color: #fff;
     text-align: center;
     padding: 1em;
@@ -52,8 +62,16 @@ section {
     padding: 2em;
 }
 
-.comida {
+img{
     width: 300px;
+
+}
+
+.comida {
+    background-image: radial-gradient(#000cef 1.6px, #e5e5f700 1.6px);
+    background: linear-gradient(0deg, #320784,  #ff1493);
+    opacity: 0.8;
+    max-width: 300px;
     margin: 1em;
     padding: 1em;
     background-color: #fff;
@@ -62,17 +80,27 @@ section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    
 }
+
 
 .filtro-container {
     margin-bottom: 20px;
 }
 
+.img-container img {
+    transition: opacity 1s ease-in-out;
+}
+
+
 
 .comida img {
-    width: 100%;
-    border-radius: 5px 5px 0 0;
+    width: 100%;  /* o el ancho que prefieras */
+    height: auto; /* mantiene la relación de aspecto */
+    border-radius: 5px;
+    transition: opacity 2s ease; /* Cambia la duración de la transición a 3 segundos */
 }
+
 
 .comida.visible {
     opacity: 1;
@@ -83,7 +111,7 @@ section {
     padding-left: 175px;
 }
 
-button{
+.button{
     width: 100px;
     border-radius: 10px 10px 10px 10px;
     background-color: #c8b5cc;
@@ -108,7 +136,7 @@ footer {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #2415af; /* Color de fondo rojo */
+    background-color: #190d80; /* Color de fondo rojo */
     width: 50px;
     height: 50px;
     border-radius: 50%;

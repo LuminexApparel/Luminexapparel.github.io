@@ -143,3 +143,57 @@ function enviarMensajeWhatsApp(mensaje) {
     // Abre la ventana de chat de WhatsApp en una nueva pestaña
     window.open(whatsappLink);
 }
+
+
+
+document.getElementById('cambiar_fondo').addEventListener('click', function() {
+    var divs = document.querySelectorAll('.comida');
+
+    divs.forEach(function(div) {
+        var topImg = div.querySelector('.top');
+        var bottomImg = div.querySelector('.bottom');
+
+        // Ensure topImg and bottomImg are valid
+        if (topImg && bottomImg) {
+            // Comprueba si la imagen superior es visible
+            if (window.getComputedStyle(topImg).getPropertyValue('opacity') !== '0') {
+                topImg.style.opacity = '0';
+                topImg.style.display = 'none';
+                bottomImg.style.opacity = '1';
+                bottomImg.style.display = 'block';
+            } else {
+                topImg.style.opacity = '1';
+                topImg.style.display = 'block';
+                bottomImg.style.opacity = '0';
+                bottomImg.style.display = 'none';
+            }
+        }
+
+        if (div.classList.contains('color1')) {
+            div.classList.remove('color1');
+            div.classList.add('color2');
+        } else {
+            div.classList.remove('color2');
+            div.classList.add('color1');
+        }
+    });
+});
+
+
+
+var botonCambiarFondo = document.getElementById('cambiar_fondo');
+var cambio = false; // Estado inicial: no cambiado
+
+botonCambiarFondo.addEventListener('click', function() {
+    if (cambio) {
+        // Restaurar el color de fondo a blanco
+        document.body.style.backgroundColor = '#ef454579';
+        cambio = false; // Cambiar al estado no cambiado
+    } else {
+        // Cambiar el color de fondo a violeta fluor
+        document.body.style.backgroundColor = '#88158d'; // Violeta fluor
+        cambio = true; // Cambiar al estado cambiado
+    }
+});
+
+
