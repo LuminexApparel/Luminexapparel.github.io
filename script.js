@@ -196,4 +196,3 @@ botonCambiarFondo.addEventListener('click', function() {
     }
 });
 
-

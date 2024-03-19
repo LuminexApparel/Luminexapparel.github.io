@@ -9,6 +9,20 @@ p{
     font-family: cursive;
 }
 
+
+.cambiar_fondo{
+    left: 20px;
+    height: 20px;
+    bottom: 115px;
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
+    width: 70px;
+    background: linear-gradient(0deg, #320784,  #ff1493);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .logo {
     width: 40px; /* Ajusta el tamaño de tu logo según sea necesario */
     margin-right: 10px;
@@ -176,5 +190,11 @@ button:hover{
 }
 
 .carrito-icon:hover{
-    background-color: #d31919;
+    background: linear-gradient(0deg, #320784,  #ff1493);
+}
+
+.cambiar_fondo:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
 }
