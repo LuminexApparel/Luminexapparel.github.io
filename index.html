@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="logo.png " />
+    <link rel="shortcut icon" href="logo.png" />
     <title>Luminex Apparel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <img src="logo.png" alt="Logo de Tu Mercado de Comidas" class="logo">
-        <h1><L>L</L>uminex Apparel</h1>
-        
+        <img src="logo.png" alt="Logo de Luminex Apparel" class="logo">
+        <h1>Luminex Apparel</h1>
     </header>
 
     <section id="comidas">
@@ -24,7 +23,10 @@
             <h2>Remera Gohan</h2>
             <p>Talles de S a XL</p>
             <p>Precio: ARS$12.000</p>
-            <p class="agregar"> <button class="button" onclick="agregarAlCarrito('Remera Gohan', 12.0000)">Añadir al Carrito</button></p>
+            <p class="agregar">
+                <button onclick="abrirSelectorRemera()">Agregar</button>
+                <button class="button" onclick="agregarAlCarrito('Remera Gohan', 12000)">Añadir al Carrito</button>
+            </p>
         </div>
 
         <div class="comida color1">
@@ -147,9 +149,8 @@
            <p class="agregar"><button class="button" onclick="agregarAlCarrito('Remera Vegeta', 12.0000)">Añadir al Carrito</button></p>
         </div>
 
+        <!-- Agrega más elementos "comida" según sea necesario -->
 
-
-        <!-- agregar más elementos "comida" según quiera necesario -->
     </section>
 
     <div class="botoncito"><button class="cambiar_fondo" id="cambiar_fondo">LUMINEX MODE</button></div>
@@ -167,11 +168,6 @@
         </div>
     </section>
 
-
-    
-
     <script src="script.js"></script>
-</+body>
-
-
+</body>
 </html>

@@ -37,14 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 let carrito = [];
 
 function agregarAlCarrito(nombre, precio) {
-    // Verificar si el plato ya está en el carrito
     const platoExistente = carrito.find(item => item.nombre === nombre);
 
     if (platoExistente) {
-        // Si el plato ya está en el carrito, incrementar la cantidad
         platoExistente.cantidad++;
     } else {
-        // Si el plato no está en el carrito, agregarlo
         carrito.push({ nombre, precio, cantidad: 1 });
     }
 }
@@ -54,16 +51,13 @@ function mostrarCarrito() {
     const resumenCarrito = document.getElementById('resumen-carrito');
     const totalCarrito = document.getElementById('total-carrito');
 
-    // Limpiar el resumen anterior
     resumenCarrito.innerHTML = '';
 
-    // Mostrar elementos del carrito en el resumen
     if (carrito.length > 0) {
         carrito.forEach(item => {
             const itemElemento = document.createElement('div');
-            itemElemento.textContent = `${item.cantidad}x ${item.nombre} - $${(item.precio * item.cantidad).toFixed(2)}`;
+            itemElemento.textContent = `${item.cantidad}x ${item.nombre} - ARS$${(item.precio * item.cantidad).toFixed(2)}`;
             
-            // Agregar botón para eliminar un plato
             const botonEliminar = document.createElement('button');
             botonEliminar.textContent = 'Eliminar';
             botonEliminar.onclick = () => eliminarDelCarrito(item.nombre);
@@ -72,34 +66,17 @@ function mostrarCarrito() {
             resumenCarrito.appendChild(itemElemento);
         });
 
-        // Calcular el total del carrito
         const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
 
-        // Mostrar el total del carrito
-        totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
+        totalCarrito.textContent = `Total: ARS$${total.toFixed(2)}`;
 
-        // Agregar el total al final del resumen
         resumenCarrito.appendChild(totalCarrito);
     } else {
         resumenCarrito.textContent = 'El carrito está vacío.';
         totalCarrito.textContent = '';
     }
 
-    // Mostrar la ventana del carrito
     carritoVentana.classList.add('visible');
-
-    function eliminarDelCarrito(nombre) {
-        // Encontrar el índice del plato en el carrito
-        const indice = carrito.findIndex(item => item.nombre === nombre);
-    
-        if (indice !== -1) {
-            // Eliminar el plato del carrito
-            carrito.splice(indice, 1);
-    
-            // Volver a mostrar el carrito actualizado
-            mostrarCarrito();
-        }
-    }
 }
 
 function cerrarCarrito() {
@@ -107,28 +84,32 @@ function cerrarCarrito() {
     carritoVentana.classList.remove('visible');
 }
 
-
 function ordenarAHabitacion() {
     const resumenCarrito = document.getElementById('resumen-carrito');
     const totalCarrito = document.getElementById('total-carrito');
 
-    // Verificar si el carrito está vacío
     if (carrito.length > 0) {
         let resumen = 'Resumen de la Orden:\n\n';
 
-        // Construir el resumen de la orden
         carrito.forEach(item => {
-            resumen += `${item.cantidad}x ${item.nombre} - $${(item.precio * item.cantidad).toFixed(2)}\n`;
+            resumen += `${item.cantidad}x ${item.nombre} - ARS$${(item.precio * item.cantidad).toFixed(2)}\n`;
         });
 
-        // Calcular el total del carrito
         var total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-        resumen += `\nTotal: $${total.toFixed(2)}`;
+        resumen += `\nTotal: ARS$${total.toFixed(2)}`;
 
-        // Enviar el mensaje de WhatsApp con el resumen del pedido
-        enviarMensajeWhatsApp(resumen);
+        alert(resumen);
     } else {
         alert('El carrito está vacío. Agregue elementos antes de ordenar.');
+    }
+}
+
+function eliminarDelCarrito(nombre) {
+    const indice = carrito.findIndex(item => item.nombre === nombre);
+
+    if (indice !== -1) {
+        carrito.splice(indice, 1);
+        mostrarCarrito();
     }
 }
 
@@ -195,4 +176,30 @@ botonCambiarFondo.addEventListener('click', function() {
         cambio = true; // Cambiar al estado cambiado
     }
 });
+
+
+
+function abrirSelectorRemera() {
+    console.log("La función abrirSelectorRemera() se ha llamado.");
+    const selectorRemeraHTML = `
+        <div id="selector-remera" class="carrito-ventana">
+            <h2>Seleccionar Talle y Cantidad de Remera</h2>
+            <form>
+                <label for="talle">Talle:</label>
+                <select id="talle" name="talle">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" value="1">
+                <button type="submit" onclick="agregarRemera()">Agregar al Carrito</button>
+                <button type="button" onclick="cerrarSelectorRemera()">Cancelar</button>
+            </form>
+        </div>
+    `;
+
+    document.body.insertAdjacentHTML('beforeend', selectorRemeraHTML);
+}
 
